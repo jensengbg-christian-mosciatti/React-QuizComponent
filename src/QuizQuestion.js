@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class QuizQuestion extends React.Component {
+class QuizQuestion extends Component {
   constructor(props) {
     super(props)
   }
@@ -12,9 +12,11 @@ class QuizQuestion extends React.Component {
           <p>{this.props.quiz_question.instruction_text}</p>
         </section>
         <section className="buttons">
-          <li key={this.props.quiz_question.answer_options[0]}>
-            {this.props.quiz_question.answer_options[0]}
-          </li>
+          <ul>
+            <li key={this.props.quiz_question.answer_options[0]}>
+              {this.props.quiz_question.answer_options[0]}
+            </li>
+          </ul>
         </section>
       </main>
     )
